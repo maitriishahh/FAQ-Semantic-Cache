@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "category": "refunds",
+    "question": "How long does a refund take to reach my account?",
+    "answer": "Refunds are sent to your original payment method within 5-7 business days after we receive your return. UPI and card refunds usually appear in 3-5 days; bank transfers can take up to 7.",
+    "ttl_days": 3
+  },
+  {
+    "id": 2,
+    "category": "refunds",
+    "question": "How do I get a refund for a cancelled order?",
+    "answer": "Once an order is cancelled, the refund starts automatically. Prepaid orders are refunded to the original payment method within 5-7 business days.",
+    "ttl_days": 3
+  },
+  {
+    "id": 3,
+    "category": "refunds",
+    "question": "Where do I enter my bank details for a COD refund?",
+    "answer": "For cash-on-delivery orders, add your bank account details under Account > Bank Details after the return is approved. The refund is transferred within 7-10 business days.",
+    "ttl_days": 3
+  },
+  {
+    "id": 4,
+    "category": "refunds",
+    "question": "What happens if my refund fails?",
+    "answer": "If a refund fails, we retry the original payment method. If it still fails after 7 days, contact support with your order id and we will arrange a bank transfer.",
+    "ttl_days": 3
+  },
+  {
+    "id": 5,
+    "category": "returns",
+    "question": "What is the return window?",
+    "answer": "Most items can be returned within 7 days of delivery. The item must be unused with tags attached and in its original packaging.",
+    "ttl_days": 3
+  },
+  {
+    "id": 6,
+    "category": "returns",
+    "question": "How do I start a return?",
+    "answer": "Open Orders > select the item > Return, choose a reason, and pick a pickup slot. A courier partner will collect the item from your address.",
+    "ttl_days": 3
+  },
+  {
+    "id": 7,
+    "category": "returns",
+    "question": "Can I exchange an item instead of returning it?",
+    "answer": "Yes. Choose Exchange when starting a return within 7 days of delivery. Exchanges depend on size and stock availability for the same product.",
+    "ttl_days": 3
+  },
+  {
+    "id": 8,
+    "category": "returns",
+    "question": "Are all items returnable?",
+    "answer": "No. Innerwear, cosmetics, perishables, and personalised items cannot be returned for hygiene or customisation reasons. The product page marks these as non-returnable.",
+    "ttl_days": 3
+  },
+  {
+    "id": 9,
+    "category": "payments",
+    "question": "Which payment methods do you accept?",
+    "answer": "We accept UPI, debit and credit cards, net banking, wallets, and cash on delivery. Card and UPI payments are confirmed instantly.",
+    "ttl_days": 3
+  },
+  {
+    "id": 10,
+    "category": "payments",
+    "question": "What is the cash-on-delivery limit?",
+    "answer": "Cash on delivery is available up to ₹10,000 per order. Some pin codes and high-value items are prepaid only.",
+    "ttl_days": 3
+  },
+  {
+    "id": 11,
+    "category": "payments",
+    "question": "Why was my payment declined?",
+    "answer": "A payment can fail if your bank declines the transaction, the card limit is reached, or the OTP session expires. No money is captured for a failed payment; retry with another method.",
+    "ttl_days": 3
+  },
+  {
+    "id": 12,
+    "category": "payments",
+    "question": "Is there a delivery fee?",
+    "answer": "Delivery is free on orders above ₹499. Orders below that have a flat ₹49 delivery fee, shown at checkout before payment.",
+    "ttl_days": 3
+  },
+  {
+    "id": 13,
+    "category": "payments",
+    "question": "Can I pay in instalments?",
+    "answer": "No-cost EMI is available on selected cards for orders above ₹3,000. Eligible options appear at checkout after you select a card.",
+    "ttl_days": 3
+  },
+  {
+    "id": 14,
+    "category": "delivery",
+    "question": "How long does delivery take?",
+    "answer": "Delivery takes 3-5 days in metro cities and 5-7 days elsewhere. The exact date is shown on the product page and at checkout.",
+    "ttl_days": 7
+  },
+  {
+    "id": 15,
+    "category": "delivery",
+    "question": "How can I track my order?",
+    "answer": "A tracking link is sent by SMS and email when the order ships. You can also open Orders > Track in your account for live status.",
+    "ttl_days": 7
+  },
+  {
+    "id": 16,
+    "category": "delivery",
+    "question": "Can I change my delivery address after ordering?",
+    "answer": "You can change the address before the order is packed. Open Orders > Change Address. After dispatch, the address cannot be changed.",
+    "ttl_days": 7
+  },
+  {
+    "id": 17,
+    "category": "delivery",
+    "question": "What if I miss the delivery?",
+    "answer": "The courier makes up to 3 delivery attempts. After that, the order returns to our warehouse and the refund is processed automatically.",
+    "ttl_days": 7
+  },
+  {
+    "id": 18,
+    "category": "delivery",
+    "question": "Is express delivery available?",
+    "answer": "Express delivery is available in selected metro pin codes for eligible items. Order before 2 PM to get same-day dispatch; the option appears at checkout when available.",
+    "ttl_days": 7
+  },
+  {
+    "id": 19,
+    "category": "cancellation",
+    "question": "How do I cancel an order?",
+    "answer": "Open Orders > Cancel before the order ships. Cancellation is free at that stage and the refund starts immediately for prepaid orders.",
+    "ttl_days": 7
+  },
+  {
+    "id": 20,
+    "category": "cancellation",
+    "question": "Can I cancel an order after it has shipped?",
+    "answer": "No. Once the order ships it cannot be cancelled. You can refuse the delivery or return the item after it arrives.",
+    "ttl_days": 7
+  },
+  {
+    "id": 21,
+    "category": "cancellation",
+    "question": "Is there a cancellation fee?",
+    "answer": "No. Cancelling before dispatch is always free. Refusing a delivery may lead to the delivery fee not being refunded.",
+    "ttl_days": 7
+  },
+  {
+    "id": 22,
+    "category": "cancellation",
+    "question": "Can I cancel part of an order?",
+    "answer": "Yes, if the items ship separately. Open Orders, select the item you want to cancel, and cancel it individually. The refund is adjusted for that item only.",
+    "ttl_days": 7
+  },
+  {
+    "id": 23,
+    "category": "orders",
+    "question": "How do I download my invoice?",
+    "answer": "Open Orders > select the order > Invoice. The PDF invoice can be downloaded or emailed to you from that page.",
+    "ttl_days": 14
+  },
+  {
+    "id": 24,
+    "category": "orders",
+    "question": "Why is my order still pending?",
+    "answer": "An order stays pending while the payment is being confirmed or the item is being packed. If it is pending for more than 24 hours, contact support with the order id.",
+    "ttl_days": 14
+  },
+  {
+    "id": 25,
+    "category": "orders",
+    "question": "How do I add a delivery OTP?",
+    "answer": "For orders above ₹5,000, a one-time password is sent to your registered phone number. Share it with the courier at delivery; it cannot be pre-set.",
+    "ttl_days": 14
+  },
+  {
+    "id": 26,
+    "category": "orders",
+    "question": "Can I place a bulk order?",
+    "answer": "For 10 or more units of the same item, contact our business desk from the Bulk Orders page. Bulk pricing and GST invoicing are handled separately.",
+    "ttl_days": 14
+  },
+  {
+    "id": 27,
+    "category": "account support",
+    "question": "How do I reset my password?",
+    "answer": "On the login page, choose Forgot Password and enter your registered email or phone. A reset link or OTP is sent within a minute.",
+    "ttl_days": 14
+  },
+  {
+    "id": 28,
+    "category": "account support",
+    "question": "How do I delete my account?",
+    "answer": "Open Account > Settings > Delete Account. The account is deactivated immediately; order history is kept for legal and tax records.",
+    "ttl_days": 14
+  },
+  {
+    "id": 29,
+    "category": "account support",
+    "question": "How do I change my registered phone number?",
+    "answer": "Open Account > Profile > Edit next to your phone number. Verify the new number with an OTP sent to it; the old number stops receiving alerts.",
+    "ttl_days": 14
+  },
+  {
+    "id": 30,
+    "category": "account support",
+    "question": "Why am I not receiving OTPs?",
+    "answer": "Check that your number is correct and that SMS is not blocked. If OTPs still do not arrive, try the voice-call option or contact support.",
+    "ttl_days": 14
+  }
+]

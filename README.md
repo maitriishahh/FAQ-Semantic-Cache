@@ -4,13 +4,7 @@ Terminal semantic cache for an e-commerce FAQ chatbot. Embed the question, retur
 
 No web UI. A measured result matters more than extra features.
 
-## Status
-
-Day-0 setup only: `pyproject.toml`, `uv.lock`, `.env.example`. The CLI, data, cache, and eval are not built. Do not treat this README as a claim that those pieces exist.
-
-Results (fill only after a real run; do not invent numbers):
-
-> Cache hit rate X% on N test questions at threshold T with Y false hits; LLM calls down Z%; avg latency A ms → B ms.
+Progress and decisions: `docs/STATUS.md`.
 
 ## Stack
 
@@ -45,9 +39,9 @@ Not implemented. Entry points, when they exist: `ask`, `sweep`, `bench`, `demo`.
 
 ## Data
 
-Not in the repo yet.
+`data/faqs.json` is a draft with 30 rows. The eval set is not written yet.
 
-- `data/faqs.json`: 30 FAQs, `{id, category, question, answer, ttl_days}`, ids `faq_01`…. Short TTL on price and policy topics.
+- `data/faqs.json`: `{id, category, question, answer, ttl_days}`, numeric ids `1`…`30`. TTL: 3 days for refunds, returns, payments; 7 for delivery, cancellation; 14 for orders, account support. Short TTL on price and policy topics.
 - `data/eval_set.json`: 100 rows, `{id, question, expected_faq_id | null, language, kind, split}`. 60 paraphrases, 40 negatives (at least 20 near-misses). Fixed 50/50 dev/test split. A human reviews every row. Do not edit labels or questions to improve a metric.
 
 ## What counts as a hit

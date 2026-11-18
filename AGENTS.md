@@ -5,7 +5,7 @@ Semantic cache for an e-commerce FAQ chatbot. A new question is embedded; if its
 
 Must demonstrate with real measured numbers: cache hit rate, false-hit count, LLM call reduction, latency reduction, reliability via negation guard and TTL.
 
-Not implemented yet. Root already has `pyproject.toml`, `uv.lock`, `.env.example`, `.gitignore`. Do not scaffold empty modules, data, tests, or docs until the step that needs them.
+Not implemented yet. Root has `pyproject.toml`, `uv.lock`, `.env.example`, `.gitignore`. `data/faqs.json` (30 rows) and `data/eval_set.json` (100 rows) exist as drafts. `docs/STATUS.md` tracks progress. Do not scaffold empty modules or tests until the step that needs them.
 
 ## Goals and non-goals
 Non-goals: Redis/RedisVL, LangChain, LlamaIndex, GPTCache, agents, GraphRAG, per-tenant caches, fine-tuning, web UI (Streamlit only after the core works and only if asked).
@@ -45,12 +45,12 @@ docs/          STATUS.md
 AGENTS.md  README.md  .env.example  pyproject.toml  uv.lock
 ```
 
-Already present: `pyproject.toml`, `uv.lock`, `.env.example`, `.gitignore`, `.env` (gitignored). `storage/` is gitignored for the SQLite file.
+Already present: `pyproject.toml`, `uv.lock`, `.env.example`, `.gitignore`, `.env` (gitignored), `data/faqs.json`, `data/eval_set.json`, `docs/STATUS.md`. `storage/` is gitignored for the SQLite file.
 
 ## Data schemas
-faqs.json: `{id, category, question, answer, ttl_days}`. 30 entries covering refunds, returns, payments, delivery, cancellation, orders, account support. Unique ids (`faq_01`…). `ttl_days` per category (short for price/policy topics).
+faqs.json: `{id, category, question, answer, ttl_days}`. 30 entries covering refunds, returns, payments, delivery, cancellation, orders, account support. Numeric ids `1`…`30`, unique (owner's choice; not `faq_01`). `ttl_days` per category: 3 for refunds/returns/payments, 7 for delivery/cancellation, 14 for orders/account support.
 
-eval_set.json: exactly 100 rows `{id, question, expected_faq_id | null, language: en|hi|hinglish, kind: paraphrase|near_miss|out_of_domain, split: dev|test}`.
+eval_set.json: exactly 100 rows `{id, question, expected_faq_id | null, language: en|hi|hinglish, kind: paraphrase|near_miss|out_of_domain, split: dev|test}`, ids `eval_001`…`eval_100`. Positives: 30 en, 30 hinglish, one per FAQ per split. Negatives: 20 near_miss, 20 out_of_domain. Fixed 50/50 dev/test, stratified by kind.
 
 - 60 positives (`kind=paraphrase`): genuine paraphrases of the 30 FAQs, a mix of English, Hindi (Devanagari or romanized) and Hinglish, with typos/short forms.
 - 40 negatives (`expected_faq_id=null`): at least 20 `near_miss` (same topic, different intent or negation flipped, e.g. "refund milega" vs "refund nahi milega"), the rest `out_of_domain`.
