@@ -1,0 +1,17 @@
+[project]
+name = "faq-semantic-cache"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "faiss-cpu>=1.16.0",
+    "google-genai>=3.5.0",
+    "numpy>=2.5.5",
+    "python-dotenv>=1.2.4",
+    "sentence-transformers>=6.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
