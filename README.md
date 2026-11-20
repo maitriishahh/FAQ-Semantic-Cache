@@ -39,10 +39,10 @@ Not implemented. Entry points, when they exist: `ask`, `sweep`, `bench`, `demo`.
 
 ## Data
 
-`data/faqs.json` is a draft with 30 rows. The eval set is not written yet.
+Reviewed 2026-11-19. Do not edit questions or labels to improve a metric.
 
-- `data/faqs.json`: `{id, category, question, answer, ttl_days}`, numeric ids `1`…`30`. TTL: 3 days for refunds, returns, payments; 7 for delivery, cancellation; 14 for orders, account support. Short TTL on price and policy topics.
-- `data/eval_set.json`: 100 rows, `{id, question, expected_faq_id | null, language, kind, split}`. 60 paraphrases, 40 negatives (at least 20 near-misses). Fixed 50/50 dev/test split. A human reviews every row. Do not edit labels or questions to improve a metric.
+- `data/faqs.json`: `{id, category, question, answer, ttl_days}`, numeric ids `1`…`30`. TTL: 3 days for refunds, returns, payments; 7 for delivery, cancellation; 14 for orders, account support.
+- `data/eval_set.json`: 100 rows, `{id, question, expected_faq_id | null, language, kind, split}`. 60 paraphrases (30 en, 24 hinglish, 6 hi), 20 near-misses, 20 out-of-domain. Fixed 50/50 dev/test split.
 
 ## What counts as a hit
 

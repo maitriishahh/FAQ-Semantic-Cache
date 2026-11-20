@@ -48,14 +48,14 @@ AGENTS.md  README.md  .env.example  pyproject.toml  uv.lock
 Already present: `pyproject.toml`, `uv.lock`, `.env.example`, `.gitignore`, `.env` (gitignored), `data/faqs.json`, `data/eval_set.json`, `docs/STATUS.md`. `storage/` is gitignored for the SQLite file.
 
 ## Data schemas
-faqs.json: `{id, category, question, answer, ttl_days}`. 30 entries covering refunds, returns, payments, delivery, cancellation, orders, account support. Numeric ids `1`…`30`, unique (owner's choice; not `faq_01`). `ttl_days` per category: 3 for refunds/returns/payments, 7 for delivery/cancellation, 14 for orders/account support.
+faqs.json: `{id, category, question, answer, ttl_days}`. 30 entries covering refunds, returns, payments, delivery, cancellation, orders, account support. Unique numeric ids `1`…`30`. `ttl_days` per category: 3 for refunds/returns/payments, 7 for delivery/cancellation, 14 for orders/account support. FAQ 12 is delivery (fee), not payments.
 
-eval_set.json: exactly 100 rows `{id, question, expected_faq_id | null, language: en|hi|hinglish, kind: paraphrase|near_miss|out_of_domain, split: dev|test}`, ids `eval_001`…`eval_100`. Positives: 30 en, 30 hinglish, one per FAQ per split. Negatives: 20 near_miss, 20 out_of_domain. Fixed 50/50 dev/test, stratified by kind.
+eval_set.json: exactly 100 rows `{id, question, expected_faq_id | null, language: en|hi|hinglish, kind: paraphrase|near_miss|out_of_domain, split: dev|test}`, ids `eval_001`…`eval_100`. Positives: 30 en, 24 hinglish, 6 hi, one per FAQ per split. Negatives: 20 near_miss, 20 out_of_domain. Fixed 50/50 dev/test, stratified by kind, 3 Hindi positives in each split.
 
 - 60 positives (`kind=paraphrase`): genuine paraphrases of the 30 FAQs, a mix of English, Hindi (Devanagari or romanized) and Hinglish, with typos/short forms.
 - 40 negatives (`expected_faq_id=null`): at least 20 `near_miss` (same topic, different intent or negation flipped, e.g. "refund milega" vs "refund nahi milega"), the rest `out_of_domain`.
 - Fixed 50/50 stratified dev/test split stored in the file.
-- Generated data is a draft. A human reviews all 100 rows. Never edit labels or questions to improve a metric.
+- Review pass of 2026-11-19 applied. Further edits only to fix a real mistake, never to improve a metric.
 
 ## Invariants
 - Evaluation uses a read-only, in-memory snapshot of the original 30 FAQs. Eval never calls the LLM and never writes new entries to the cache.

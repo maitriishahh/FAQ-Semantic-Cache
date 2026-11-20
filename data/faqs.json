@@ -78,10 +78,10 @@
   },
   {
     "id": 12,
-    "category": "payments",
+    "category": "delivery",
     "question": "Is there a delivery fee?",
     "answer": "Delivery is free on orders above ₹499. Orders below that have a flat ₹49 delivery fee, shown at checkout before payment.",
-    "ttl_days": 3
+    "ttl_days": 7
   },
   {
     "id": 13,
@@ -170,8 +170,8 @@
   {
     "id": 25,
     "category": "orders",
-    "question": "How do I add a delivery OTP?",
-    "answer": "For orders above ₹5,000, a one-time password is sent to your registered phone number. Share it with the courier at delivery; it cannot be pre-set.",
+    "question": "Why do I need an OTP for delivery?",
+    "answer": "For orders above ₹5,000, a one-time password is sent to your registered phone number to confirm the right person receives the parcel. Share it with the courier at delivery; it cannot be pre-set.",
     "ttl_days": 14
   },
   {
